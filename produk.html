@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Produk - Sembako Modern</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="icon" href="images/favicon.webp" type="image/webp">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo"><a href="index.html"><span>Sembako</span>Modern</a></div>
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="index.html">Beranda</a></li>
+                    <li><a href="produk.html" class="active">Produk</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <div class="cart-btn" id="cart-btn" aria-label="Keranjang Belanja">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <div class="menu-btn" id="menu-btn" aria-label="Tampilkan Menu"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="all-products">
+        <div class="container">
+            <h2 class="section-title">Semua Produk Kami</h2>
+            <div class="toolbar">
+                <input type="search" placeholder="Cari nama produk..." id="searchInput" aria-label="Cari Produk">
+                <select id="categoryFilter" aria-label="Filter Kategori">
+                    <option value="all">Semua Kategori</option>
+                </select>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                </div>
+        </div>
+    </main>
+    <section class="order-section" id="order-form-section">
+    <div class="container">
+        <div class="order-form">
+            <h2 class="section-title">Formulir Pemesanan</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="customerName">Nama Lengkap</label>
+                    <input type="text" id="customerName" placeholder="Masukkan nama lengkap Anda" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerPhone">Nomor WhatsApp</label>
+                    <input type="tel" id="customerPhone" placeholder="Contoh: 08123456789" required>
+                </div>
+                <div class="form-group">
+                    <label for="customerAddress">Alamat Pengiriman</label>
+                    <textarea id="customerAddress" placeholder="Masukkan alamat lengkap untuk pengiriman" required rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Pesanan Anda</label>
+                    <textarea id="orderItems" readonly placeholder="Pesanan Anda akan muncul di sini setelah Anda menambahkan produk ke keranjang..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="orderTotal">Total Harga</label>
+                    <input type="text" id="orderTotal" readonly>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Pesan via WhatsApp</button>
+            </form>
+        </div>
+    </div>
+</section>
+    
+    <a href="https://wa.me/6283114925705?text=Halo%20SembakoModern" class="whatsapp-btn" target="_blank" aria-label="Hubungi via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <script src="produk.min.js" defer></script>
+    <script src="script.min.js" defer></script> 
+</body>
+</html>

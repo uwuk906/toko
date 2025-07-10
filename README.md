@@ -1,1 +1,1 @@
-# toko
+# Ini adalah proyek Toko Hasanah.
